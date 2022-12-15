@@ -1,12 +1,11 @@
 name: Output Issue details
-on: 
- issues:
-  jobs:
-    output_issue_information:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Output issue content
-          run: echo "${{ toJSON(github)) }}"  
+on: issues
+jobs:
+  output_issue_information:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output issue content
+        run: echo "${{ toJSON(github)) }}"  
 
 
 
