@@ -1,13 +1,15 @@
 name: Output Issue details
 on: 
  issues:
-   types: [created]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Get Code
-        uses: actions/checkout@v3
-      - name: Output issue content
-        run: echo "${{toJSON(github.issue))}}"  
+  jobs:
+    output_issue_information:
+      types: [created]
+      runs-on: ubuntu-latest
+      steps:
+        - name: Get Code
+          uses: actions/checkout@v3
+        - name: Output issue content
+          run: echo "${{toJSON(github.issue))}}"  
 
 
 
